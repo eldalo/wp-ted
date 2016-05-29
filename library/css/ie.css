@@ -1,0 +1,129 @@
+/*********************
+NAVIGATION STYLES
+*********************/
+/* .menu is clearfixed inside mixins.scss */
+.menu {
+/* end .menu ul */ }
+.menu ul {
+/* end .menu ul li */
+/* highlight current page */
+/* end current highlighters */ }
+.menu ul li {
+/*
+plan your menus and drop-downs wisely.
+*/ }
+.menu ul li a {
+/*
+you can use hover styles here even though this size
+has the possibility of being a mobile device.
+*/ }
+
+/* end .menu */
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* entry content */
+.entry-content {
+/* at this larger size, we can start to align images */ }
+.entry-content .alignleft, .entry-content img.alignleft {
+margin-right: 1.5em;
+display: inline;
+float: left; }
+.entry-content .alignright, .entry-content img.alignright {
+margin-left: 1.5em;
+display: inline;
+float: right; }
+.entry-content .aligncenter, .entry-content img.aligncenter {
+margin-right: auto;
+margin-left: auto;
+display: block;
+clear: both; }
+
+.wrap {
+width: 760px; }
+
+/*********************
+HEADER STYLES
+*********************/
+/*********************
+NAVIGATION STYLES
+*********************/
+.nav {
+border: 0;
+/* end .menu ul li */
+/* highlight current page */
+/* end current highlighters */ }
+.nav ul {
+margin-top: 0; }
+.nav li {
+float: left;
+position: relative;
+/*
+plan your menus and drop-downs wisely.
+*/
+/* showing sub-menus */ }
+.nav li a {
+border-bottom: 0;
+/*
+you can use hover styles here even though this size
+has the possibility of being a mobile device.
+*/ }
+.nav li a:hover, .nav li a:focus {
+color: white;
+text-decoration: underline; }
+.nav li ul.sub-menu,
+.nav li ul.children {
+margin-top: 0;
+border: 1px solid #ccc;
+border-top: 0;
+position: absolute;
+overflow: hidden;
+visibility: hidden;
+z-index: 8999;
+/* highlight sub-menu current page */ }
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+/*
+if you need to go deeper, go nuts
+just remember deeper menus suck
+for usability. k, bai.
+*/ }
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+padding-left: 10px;
+border-right: 0;
+display: block;
+width: 180px;
+border-bottom: 1px solid #ccc; }
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a {
+border-bottom: 0; }
+.nav li:hover ul {
+top: auto;
+overflow: visible;
+visibility: visible; }
+
+/* end .nav */
+/*********************
+SIDEBARS & ASIDES
+*********************/
+.sidebar {
+margin-top: 2.2em; }
+
+.widgettitle {
+border-bottom: 2px solid #444;
+margin-bottom: 0.75em; }
+
+.widget {
+padding: 0 10px;
+margin: 2.2em 0; }
+.widget ul li {
+margin-bottom: 0.75em;
+/* deep nesting */ }
+.widget ul li ul {
+margin-top: 0.75em;
+padding-left: 1em; }
+
+.footer-links ul li {}
+.wrap {
+width: 1040px; }

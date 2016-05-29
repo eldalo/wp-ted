@@ -1,0 +1,30 @@
+{
+  "name": "wp-ted",
+  "description": "Theme skeleton wordpress basado en WPBones, adaptación de Gulp y Bower.",
+  "main": "",
+  "authors": [
+    "Diego Londoño Marín <dlondonom@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "OpenSource",
+    "Development",
+    "Web",
+    "WebDevelopment",
+    "Gulp",
+    "Bower",
+    "SASS",
+    "JavaScript",
+    "Wordpress"
+  ],
+  "homepage": "https://github.com/dlondono/wp-ted",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
