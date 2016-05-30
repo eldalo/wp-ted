@@ -1,0 +1,23 @@
+
+.absolute       { position: absolute; }
+.absolute-bottom-left  { bottom: 0; left: 0; position: absolute; }
+.absolute-bottom-right { bottom: 0; position: absolute; right: 0; }
+.absolute-top-left     { left: 0; position: absolute; top: 0; }
+.absolute-top-right    { position: absolute; right: 0; top: 0; }
+.block          { display: block; }
+.center         { margin: auto; }
+.fixed          { position: fixed; }
+.fixed-bottom-left  { bottom: 0; left: 0; position: absolute; }
+.fixed-bottom-right { bottom: 0; position: absolute; right: 0; }
+.fixed-top-left     { left: 0; position: absolute; top: 0; }
+.fixed-top-right    { position: absolute; right: 0; top: 0; }
+.inline         { display: inline-block; vertical-align: top; }
+.inline-bottom  { display: inline-block; vertical-align: bottom; }
+.inline-center  { display: inline-block; vertical-align: middle; }
+.none           { display: none; }
+.opa            { opacity: 0; }
+.no-margin      { margin-left: 0; margin-right: 0; }
+.no-padding     { padding-left: 0; padding-right: 0; }
+.overflow       { overflow: hidden; }
+.relative       { position: relative; }
+.uppercase      { text-transform: uppercase; }
