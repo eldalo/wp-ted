@@ -91,10 +91,8 @@ function ted_scripts_and_styles()
     global $wp_styles;
 
     if ( !is_admin() ) {
-		// modernizr (without media query polyfill)
-		wp_register_script( 'ted-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 		// register main stylesheet
-		wp_register_style( 'ted-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+		wp_register_style( 'ted-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.min.css', array(), '', 'all' );
 		// ie-only style sheet
 		wp_register_style( 'ted-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
 
@@ -103,10 +101,9 @@ function ted_scripts_and_styles()
             wp_enqueue_script( 'comment-reply' );
 
 		//adding scripts file in the footer
-		wp_register_script( 'ted-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+		wp_register_script( 'ted-js', get_stylesheet_directory_uri() . '/library/js/script.min.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
-		wp_enqueue_script( 'ted-modernizr' );
 		wp_enqueue_style( 'ted-stylesheet' );
 		wp_enqueue_style( 'ted-ie-only' );
         // add conditional wrapper around ie stylesheet

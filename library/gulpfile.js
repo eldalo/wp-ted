@@ -28,8 +28,8 @@ var files = {
         css    : '*.css',
         js     : '*.js',
         sass   : '*/*.scss',
-        script : 'style.scss',
-        style  : 'script.js'
+        script : 'script.js',
+        style  : 'style.scss'
     };
 
 gulp.task('styles', function() {
