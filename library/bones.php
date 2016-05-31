@@ -92,6 +92,7 @@ function ted_scripts_and_styles()
 
     if ( !is_admin() ) {
 		// register main stylesheet
+		wp_register_style( 'ted-components', get_stylesheet_directory_uri() . '/library/css/components.min.css', array(), '', 'all' );
 		wp_register_style( 'ted-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.min.css', array(), '', 'all' );
 		// ie-only style sheet
 		wp_register_style( 'ted-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
@@ -101,15 +102,18 @@ function ted_scripts_and_styles()
             wp_enqueue_script( 'comment-reply' );
 
 		//adding scripts file in the footer
+		wp_register_script( 'ted-components-js', get_stylesheet_directory_uri() . '/library/js/components.min.js', array(), '', false );
 		wp_register_script( 'ted-js', get_stylesheet_directory_uri() . '/library/js/script.min.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
+		wp_enqueue_style( 'ted-components' );
 		wp_enqueue_style( 'ted-stylesheet' );
 		wp_enqueue_style( 'ted-ie-only' );
         // add conditional wrapper around ie stylesheet
 		$wp_styles->add_data( 'ted-ie-only', 'conditional', 'lt IE 9' );
 
 		wp_enqueue_script( 'jquery' );
+		wp_enqueue_script( 'ted-components-js' );
 		wp_enqueue_script( 'ted-js' );
 	}
 }
