@@ -1,11 +1,14 @@
+(function ($, window, document, undefined) {
+    'use strict';
 
-function initReady() {
+    function initReady() {
 
-}
+    }
 
-function initLoad() {
+    function initLoad() {
 
-}
+    }
 
-jQuery(document).on('ready', initReady);
-jQuery(window).on('load', initLoad);
+    $(document).on('ready', initReady);
+    $(window).on('load', initLoad);
+})(jQuery, window, document);
