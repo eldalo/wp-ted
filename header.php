@@ -12,10 +12,11 @@
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-        <!-- <meta name="msapplication-TileColor" content="#">
+        <!-- 
+        <meta name="msapplication-TileColor" content="#">
         <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri() ?>/library/images/icons/favicon.ico">
-        <meta name="theme-color" content="#"> -->
+        <meta name="theme-color" content="#"> 
+        -->
 
         <?php wp_head() ?>
     </head>

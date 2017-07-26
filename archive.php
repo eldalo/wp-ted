@@ -2,9 +2,9 @@
 	<section>
 		<div>
 			<h1 class="archive-title h2"><?php post_type_archive_title() ?></h1>
-			<?php if ( have_posts() ): ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-				<article <?php post_class( 'cf' ) ?> id="post-<?php the_ID() ?>">
+			<?php if (have_posts()): ?>
+				<?php while (have_posts()) : the_post(); ?>
+				<article <?php post_class('cf') ?> id="post-<?php the_ID() ?>">
 					<div>
 						<h3 class="h2">
 							<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_title() ?></a>
@@ -18,9 +18,9 @@
 			<?php else: ?>
 				<article class="hentry cf" id="post-not-found">
 					<div>
-						<h1><?php _e( 'Oops, Post Not Found!', 'ted' ); ?></h1>
-						<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'ted' ); ?></p>
-						<p><?php _e( 'This is the error message in the custom posty type archive template.', 'ted' ); ?></p>
+						<h1><?php _e('Oops, Post Not Found!', 'ted'); ?></h1>
+						<p><?php _e('Uh Oh. Something is missing. Try double checking things.', 'ted'); ?></p>
+						<p><?php _e('This is the error message in the custom posty type archive template.', 'ted'); ?></p>
 					</div>
 				</article>
 			<?php endif ?>
