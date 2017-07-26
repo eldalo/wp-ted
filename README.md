@@ -1,11 +1,10 @@
-# wp-ted
-Theme skeleton wordpress basado en WPBones, adaptación de Gulp y Bower.
+# WP Ted
+Theme based on WP Bones, with adaptation of Gulp and Bower.
 
-## Tener presente: ##
-1. ir a la carpeta *library*
-2. ejecutar el siguiente comando `sudo npm install`
-3. instalar los paquetes necesarias para **Bower**, ejecutando el siguiente comando `bower install --save <paquete>`
-4. ejecutar el siguiente comando `gulp` para compilar los archivos
-5. tener presente que cada vez que agregamos un nuevo paquete a **Bower** debemos ejecutar el comando `gulp` para compilar los nuevos archivos
+## Remember: ##
+1. Go to the folder *library*
+2. Run `sudo npm install`
+3. Install packages for **Bower**, run `bower install --save <package>`
+4. Run `gulp`
 
-> Con esto ya puedes trabajar con tu plantilla **TED**
+> Welcome **WP Ted**
