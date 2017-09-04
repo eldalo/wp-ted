@@ -74,8 +74,9 @@ function ted_remove_wp_ver_css_js($src)
 // remove injected CSS for recent comments widget
 function ted_remove_wp_widget_recent_comments_style()
 {
-	if ( has_filter( 'wp_head', 'wp_widget_recent_comments_style' ) )
+	if (has_filter('wp_head', 'wp_widget_recent_comments_style')) {
 		remove_filter( 'wp_head', 'wp_widget_recent_comments_style' );
+	}
 }
 
 // remove injected CSS from recent comments widget
