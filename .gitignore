@@ -16,3 +16,6 @@ Icon
 ._*
 .Spotlight-V100
 .Trashes
+
+yarn-error.log
+yarn.lock
