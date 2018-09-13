@@ -1,20 +1,18 @@
+@import 'resources/bower_components/bootstrap/scss/bootstrap';
+
 // SCSS MIXINS
 @import 'mixins/_position.scss';
 
 // CONFIG MODULES
 @import 'modules/_vars.scss';
-@import 'modules/_defaults.scss';
+@import 'modules/_app.scss';
 @import 'modules/_normalize.scss';
 @import 'modules/_typography.scss';
-@import 'modules/_app.scss';
 @import 'modules/_animated.scss';
 
 // PARTIALS
-@import 'partials/_loaders.scss';
 @import 'partials/_header.scss';
-@import 'partials/_nav.scss';
 @import 'partials/_sidebar.scss';
-@import 'partials/_home.scss';
 @import 'partials/_main.scss';
 @import 'partials/_footer.scss';
 

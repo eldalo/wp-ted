@@ -1,23 +1,162 @@
+* {
+    box-sizing: border-box;
+    font-smoothing: antialiased;
+    outline: 0;
+    text-rendering: optimizeLegibility;
+    text-decoration: none;
+}
 
-.absolute       { position: absolute; }
-.absolute-bottom-left  { bottom: 0; left: 0; position: absolute; }
-.absolute-bottom-right { bottom: 0; position: absolute; right: 0; }
-.absolute-top-left     { left: 0; position: absolute; top: 0; }
-.absolute-top-right    { position: absolute; right: 0; top: 0; }
-.block          { display: block; }
-.center         { margin: auto; }
-.fixed          { position: fixed; }
-.fixed-bottom-left  { bottom: 0; left: 0; position: absolute; }
-.fixed-bottom-right { bottom: 0; position: absolute; right: 0; }
-.fixed-top-left     { left: 0; position: absolute; top: 0; }
-.fixed-top-right    { position: absolute; right: 0; top: 0; }
-.inline         { display: inline-block; vertical-align: top; }
-.inline-bottom  { display: inline-block; vertical-align: bottom; }
-.inline-center  { display: inline-block; vertical-align: middle; }
-.none           { display: none; }
-.opa            { opacity: 0; }
-.no-margin      { margin-left: 0; margin-right: 0; }
-.no-padding     { padding-left: 0; padding-right: 0; }
-.overflow       { overflow: hidden; }
-.relative       { position: relative; }
-.uppercase      { text-transform: uppercase; }
+html {
+    background-color: #f3f3f4;
+    font-size: 16px;
+}
+
+/* App */
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.margin-bottom-15 {
+  margin-bottom: 15px;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
+.margin-left-0 {
+  margin-left: 0;
+}
+
+.margin-left-15 {
+  margin-left: 15px;
+}
+
+.margin-left-30 {
+  margin-left: 30px;
+}
+
+.margin-right-0 {
+  margin-right: 0;
+}
+
+.margin-right-15 {
+  margin-right: 15px;
+}
+
+.margin-right-30 {
+  margin-right: 30px;
+}
+
+.margin-top-0 {
+  margin-top: 0;
+}
+
+.margin-top-5 {
+  margin-top: 5px;
+}
+
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+.none {
+  display: none;
+}
+
+.no-margin { 
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.opacity-0 { 
+  opacity: 0; 
+}
+
+.opacity-5 { 
+  opacity: .5; 
+}
+
+.opacity-15 { 
+  opacity: .15; 
+}
+
+.opacity-30 { 
+  opacity: .30; 
+}
+
+.opacity-50 { 
+  opacity: .50; 
+}
+
+.overflow { 
+  overflow: hidden; 
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0;
+}
+
+.padding-bottom-15 {
+  padding-bottom: 15px;
+}
+
+.padding-bottom-30 {
+  padding-bottom: 30px;
+}
+
+.padding-left-0 {
+  padding-left: 0;
+}
+
+.padding-left-15 {
+  padding-left: 15px;
+}
+
+.padding-left-30 {
+  padding-left: 30px;
+}
+
+.padding-right-0 {
+  padding-right: 0;
+}
+
+.padding-right-15 {
+  padding-right: 15px;
+}
+
+.padding-right-30 {
+  padding-right: 30px;
+}
+
+.padding-top-0 {
+  padding-top: 0;
+}
+
+.padding-top-15 {
+  padding-top: 15px;
+}
+
+.padding-top-30 {
+  padding-top: 30px;
+}
+/* END App */

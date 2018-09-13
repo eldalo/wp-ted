@@ -2,7 +2,7 @@
     'use strict';
 
     function initReady() {
-
+        
     }
 
     function initLoad() {

@@ -1,81 +1,101 @@
-var gulp    = require('gulp'),
-    sass    = require('gulp-sass'),
-    concat  = require('gulp-concat'),
-    bowerFiles   = require('main-bower-files'),
-    autoprefixer = require('gulp-autoprefixer'),
-    uglify  = require('gulp-uglify'),
-    jshint  = require('gulp-jshint'),
-    rename  = require('gulp-rename'),
-    notify  = require('gulp-notify'),
-    minifyCSS   = require('gulp-minify-css');
+var gulp = require('gulp'),
+    bowerFiles = require('main-bower-files'),
+    $ = require('gulp-load-plugins')({ lazy: true });
 
 var paths = {
-        in : {
-            scripts : 'resources/js/',
-            sass    : 'resources/sass/'
-        },
-        out : {
-            fonts   : 'fonts',
-            scripts : 'js',
-            styles  : 'css'
-        }
-    };
+    resources: {
+        javascript: 'resources/js/',
+        sass: 'resources/sass/',
+        images: 'resources/images/'
+    },
+    public: {
+        fonts: 'fonts',
+        scripts: 'js',
+        styles: 'css',
+        images: 'images'
+    } 
+};
 
-var files = {
-        css    : '*.css',
-        js     : '*.js',
-        sass   : '*/*.scss',
-        script : 'script.js',
-        style  : 'style.scss'
-    };
+var fileExt = {
+    css: '*.css',
+    js: '*.js',
+    sass: '*/*.scss',
+    script: 'script.js',
+    styleSASS: 'style.scss',
+    all: '**'
+};
 
 gulp.task('styles', function() {
-    return gulp.src( paths.in.sass + files.style )
-            .pipe( sass({ errLogToConsole: true }) )
-            .pipe( autoprefixer('last 5 version') )
-            .pipe( rename({ suffix: '.min' }) )
-            .pipe( minifyCSS() )
-            .pipe( gulp.dest(paths.out.styles) )
-            .pipe( notify( function(file) {
-                return 'SASS Compiler file: '+ file.relative;
-            }) );
+    return gulp.src(paths.resources.sass + fileExt.styleSASS)
+            .pipe($.sass().on('error', $.sass.logError))
+            .pipe($.autoprefixer('last 5 version'))
+            .pipe($.rename({ suffix: '.min' }))
+            .pipe($.cleanCss())
+            .pipe(gulp.dest(paths.public.styles))
+            .pipe($.notify(function(file) {
+                return 'Compiler SASS file: ' + file.relative;
+            }));
 });
 
 gulp.task('scripts', function() {
-    return gulp.src( paths.in.scripts + files.script )
-        .pipe( jshint('.jshintrc') )
-        .pipe( jshint.reporter('default') )
-        .pipe( rename({ suffix: '.min' }) )
-        .pipe( uglify() )
-        .pipe( gulp.dest(paths.out.scripts) )
-        .pipe( notify( function(file) {
-            return 'Scripts Compiler file: '+ file.relative;
-        }) );
+    return gulp.src(paths.resources.javascript + fileExt.script)
+            .pipe($.plumber())
+            .pipe($.babel({
+                presets: ['@babel/env']
+            }))
+            .pipe($.rename({ suffix: '.min' }))
+            .pipe($.uglify())
+            .pipe(gulp.dest(paths.public.scripts))
+            .pipe($.notify(function(file) {
+                return 'Compiler Scripts file: ' + file.relative;
+            }));
 });
 
-gulp.task('bower_styles', function() {
-    return gulp.src( bowerFiles('**/' + files.css) )
-            .pipe( concat('components.min.css') )
-            .pipe( minifyCSS() )
-            .pipe( gulp.dest(paths.out.styles) )
-            .pipe( notify( function(file) {
-                return 'Bower CSS Compiler file: '+ file.relative;
-            }) );
+gulp.task('stylesBower', function() {
+    return gulp.src(bowerFiles('**/' + fileExt.css))
+            .pipe($.concat('components.min.css'))
+            .pipe($.cleanCss())
+            .pipe(gulp.dest(paths.public.styles))
+            .pipe($.notify(function() {
+                return 'Compiler Bower Styles file: ' + file.relative;
+            }));
 });
 
-gulp.task('bower_scripts', function() {
-    return gulp.src( bowerFiles('**/' + files.js) )
-            .pipe( concat('components.min.js') )
-            .pipe( uglify() )
-            .pipe( gulp.dest(paths.out.scripts) )
-            .pipe( notify( function(file) {
-                return 'Bower Compiler file: '+ file.relative;
-            }) );
+gulp.task('scriptsBower', function() {
+    return gulp.src(bowerFiles('**/' + fileExt.js))
+            .pipe($.concat('components.min.js'))
+            .pipe($.uglify())
+            .pipe(gulp.dest(paths.public.scripts))
+            .pipe($.notify(function (file) {
+                return 'Compiler Bower Scripts file: ' + file.relative;
+            }));
 });
 
-gulp.task('watch', function() {
-    gulp.watch( paths.in.sass + files.sass, ['styles'] );
-    gulp.watch( paths.in.scripts + files.js, ['scripts'] );
+gulp.task('images', function() {
+    return gulp.src(paths.resources.images + fileExt.all)
+            .pipe($.changed('images'))
+            .pipe($.imagemin({
+                progressive: true,
+                interlaced: true
+            }))
+            .pipe(gulp.dest(paths.public.images))
+            .pipe($.size({ title: 'images' }))
+            .pipe($.notify(function (file) {
+                return 'Optimizes the images: ' + file.relative;
+            }));
 });
 
-gulp.task('default', [ 'styles', 'scripts', 'bower_styles', 'bower_scripts', 'watch' ]);
+gulp.task('watch', function () {
+    gulp.watch(paths.resources.sass + fileExt.sass, ['styles']);
+    gulp.watch(paths.resources.javascript + fileExt.js, ['scripts']);
+});
+
+gulp.task('default', function() {
+    gulp.start(
+        'styles', 
+        'scripts', 
+        'stylesBower', 
+        'scriptsBower',
+        'watch'
+    );
+});

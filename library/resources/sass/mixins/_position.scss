@@ -1,23 +1,23 @@
-@mixin placeholder($color, $family, $size, $weigth: normal) {
-    ::-webkit-input-placeholder { @include fonts($color, $family, $size, $weigth); }
-    :-moz-placeholder           { @include fonts($color, $family, $size, $weigth);}
-    ::-moz-placeholder          { @include fonts($color, $family, $size, $weigth); }
-    :-ms-input-placeholder      { @include fonts($color, $family, $size, $weigth); }
+@mixin placeholder($color, $family, $size, $weight: normal) {
+    ::-webkit-input-placeholder { @include fonts($color, $family, $size, $weight); }
+    :-moz-placeholder           { @include fonts($color, $family, $size, $weight);}
+    ::-moz-placeholder          { @include fonts($color, $family, $size, $weight); }
+    :-ms-input-placeholder      { @include fonts($color, $family, $size, $weight); }
 }
 
-@mixin fonts($color, $family, $size, $weigth: normal) {
+@mixin fonts($color, $family, $size, $weight: normal) {
     color: $color;
     font-family: $family;
     font-size: rem($size);
-    font-weight: $weigth;
+    font-weight: $weight;
 }
 
 @function rem($px, $context: 16) {
-    @if ( unitless($px) ) {
+    @if (unitless($px)) {
         $px: $px * 1px;
     }
 
-    @if ( unitless($context) ) {
+    @if (unitless($context)) {
         $context: $context * 1px;
     }
 
