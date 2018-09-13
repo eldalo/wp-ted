@@ -1,12 +1,8 @@
 /******************************************************************
-Theme Name: TED
-Theme URI: http://dlondono.info/themes/wp-ted
-Description: Theme skeleton wordpress basado en WPBones, adaptación de Gulp y Bower.
+Theme Name: WP Ted
+Theme URI: https://github.com/eldalo/wp-ted
+Description: Theme based on WP Bones, with adaptation of Gulp and Bower.
 Author: Diego Londoño Marín <dlondonom@gmail.com>
-Author URI: http://dlondono.info
-Version: 1.7
-Tags: fluid-layout, responsive-layout, accessibility-ready, translation-ready, microformats, rtl-language-support
-
-.sticky {}          /* DO NOT EDIT THIS */
-.gallery-caption {} /* THESE ARE USELESS */
-.bypostauthor {}    /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */
+Author Website: https://eldalo.github.io
+Version: 2.0
+*/

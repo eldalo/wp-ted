@@ -1,6 +1,6 @@
 {
   "name": "WP-Ted",
-  "description": "Theme skeleton wordpress basado en WPBones, adaptación de Gulp y Bower.",
+  "description": "Theme based on WP Bones, with adaptation of Gulp and Bower.",
   "author": "Diego Londoño Marín <dlondonom@gmail.com>",
   "license": "MIT",
   "version": "2.0",

@@ -4,7 +4,7 @@
   "url": "http://dlondono.info",
   "version": "2.0",
   "main": "gulpfile.js",
-  "description": "Theme skeleton wordpress basado en WPBones, adaptación de Gulp y Bower.",
+  "description": "Theme based on WP Bones, with adaptation of Gulp and Bower.",
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.0.1",
