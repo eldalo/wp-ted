@@ -1,10 +1,15 @@
 {
-  "name": "WP-Ted",
-  "description": "Theme based on WP Bones, with adaptation of Gulp and Bower.",
+  "name": "wp-ted-theme",
   "author": "Diego Londoño Marín <dlondonom@gmail.com>",
+  "version": "11.0",
   "license": "MIT",
-  "version": "2.0",
   "dependencies": {
-    "bootstrap": "^4.1.3"
+    "popper.js": "^1.15.0",
+    "bootstrap": "^4.1.3",
+    "moment": "^2.24.0",
+    "font-awesome": "^4.7.0",
+    "gsap": "^2.0.2",
+    "underscore": "^1.9.1",
+    "parsleyjs": "^2.9.1"
   }
 }
