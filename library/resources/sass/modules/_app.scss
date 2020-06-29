@@ -1,17 +1,32 @@
 * {
-    box-sizing: border-box;
-    font-smoothing: antialiased;
-    outline: 0;
-    text-rendering: optimizeLegibility;
-    text-decoration: none;
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  outline: 0;
+  text-rendering: optimizeLegibility;
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+  transition: all 0.3s ease;
 }
 
 html {
-    background-color: #f3f3f4;
-    font-size: 16px;
+  font-size: 16px;
 }
 
-/* App */
+a,
+a:hover,
+a:focus {
+  outline: none;
+  transition: all .5s ease;
+}
+
+/* App Default */
+.btn {
+  transition: all .5s ease-in-out;
+}
+
 .margin-bottom-0 {
     margin-bottom: 0;
 }
@@ -36,6 +51,10 @@ html {
   margin-left: 0;
 }
 
+.margin-left-5 {
+  margin-left: 5px;
+}
+
 .margin-left-15 {
   margin-left: 15px;
 }
@@ -46,6 +65,10 @@ html {
 
 .margin-right-0 {
   margin-right: 0;
+}
+
+.margin-right-5 {
+  margin-right: 5px;
 }
 
 .margin-right-15 {
@@ -80,7 +103,7 @@ html {
   display: none;
 }
 
-.no-margin { 
+.no-margin {
   margin: 0;
 }
 
@@ -88,32 +111,36 @@ html {
   padding: 0;
 }
 
-.opacity-0 { 
-  opacity: 0; 
+.opacity {
+  opacity: 0;
 }
 
-.opacity-5 { 
-  opacity: .5; 
+.opacity-5 {
+  opacity: .5;
 }
 
-.opacity-15 { 
-  opacity: .15; 
+.opacity-15 {
+  opacity: .15;
 }
 
-.opacity-30 { 
-  opacity: .30; 
+.opacity-30 {
+  opacity: .30;
 }
 
-.opacity-50 { 
-  opacity: .50; 
+.opacity-50 {
+  opacity: .50;
 }
 
-.overflow { 
-  overflow: hidden; 
+.overflow-none {
+  overflow: hidden;
 }
 
 .padding-bottom-0 {
   padding-bottom: 0;
+}
+
+.padding-bottom-5 {
+  padding-bottom: 5px;
 }
 
 .padding-bottom-15 {
@@ -128,6 +155,10 @@ html {
   padding-left: 0;
 }
 
+.padding-left-5 {
+  padding-left: 5px;
+}
+
 .padding-left-15 {
   padding-left: 15px;
 }
@@ -138,6 +169,10 @@ html {
 
 .padding-right-0 {
   padding-right: 0;
+}
+
+.padding-right-5 {
+  padding-right: 5px;
 }
 
 .padding-right-15 {
@@ -152,6 +187,10 @@ html {
   padding-top: 0;
 }
 
+.padding-top-5 {
+  padding-top: 5px;
+}
+
 .padding-top-15 {
   padding-top: 15px;
 }
@@ -159,4 +198,38 @@ html {
 .padding-top-30 {
   padding-top: 30px;
 }
-/* END App */
+
+.relative {
+  position: relative;
+}
+
+.fixed-bottom {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.fixed-full-bottom {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.fixed-top {
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.fixed-full-top {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/* END App Default */

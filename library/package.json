@@ -1,10 +1,8 @@
 {
-  "name": "WP-Ted",
+  "name": "wp-ted-theme",
   "author": "Diego Londoño Marín <dlondonom@gmail.com>",
-  "url": "http://dlondono.info",
-  "version": "2.0",
-  "main": "gulpfile.js",
-  "description": "Theme based on WP Bones, with adaptation of Gulp and Bower.",
+  "url": "https://github.com/eldalo/wp-ted",
+  "version": "11.0",
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.0.1",
